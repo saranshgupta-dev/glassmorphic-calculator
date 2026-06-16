@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b0c10;
+    padding: 20px;
+}
+.calculator{
+    background: rgba(23, 24, 34, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    padding: 28px 22px;
+    border-radius: 26px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7),
+                inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    width: 100%;
+    max-width: 325px;            
+}
+.display-container{
+    width: 100%;
+    margin-bottom: 22px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 16px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    overflow-x: auto;
+}
+.display-container::-webkit-scrollbar{
+    display: none;
+}
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 34px;
+    text-align: right;
+    color: #ffffff;
+    font-weight: 400;
+    white-space: nowrap;
+    /* padding: 20px 15px; */
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.2);
+}
+.buttons-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+button{
+    border: none;
+    outline: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #1a1c28;
+    color: #e2e8f0;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.12s ease, background-color 0.12s ease , box-shadow 0.12s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* Hover & Active Effects */
+button:hover{
+    transform: translateY(-2px);
+    background: #242738;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+button:active{
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Moder Electric Green for Operator */
+.operator{
+    color: #00ffaa;
+    background: rgba(0, 255, 170, 0.05);
+}
+.operator:hover{
+    background: rgba(0, 255, 170, 0.12);
+}
+/* Specific styling for AC and DEL  */
+.ac , .del{
+    color: #ff5252;
+    background: rgba(255, 82, 82, 0.05);
+}
+.ac:hover, .del:hover{
+    background: rgba(255, 82, 82, 0.12);
+}
+
+/* Vibrant Orange Equal Button with Glow */
+.equal {
+    background: #ff7300;
+    color: #ffffff;
+    box-shadow: 0 6px 16px rgba(255, 115, 0, 0.35);
+}
+.equal:hover{
+    background: #ff841c;
+    box-shadow: 0 8px 20px rgba(255, 115, 0, 0.5);
+}
